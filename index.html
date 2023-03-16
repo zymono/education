@@ -75,11 +75,25 @@
                     <em class="ml-2" data-feather="arrow-right"></em>
                 </button>
               </a>
+                <button class="btn btn-primary d-inline-flex flex-row align-items-center" onclick="downloadFile()">
+                    Download For Windows
+                    <em class="ml-2" data-feather="arrow-right"></em>
+                </button>
             </div>
         </div>
     </div>
 </section>
 <script>
+    function downloadFile() {
+  var link = document.createElement('a');
+  link.setAttribute('href', 'https://cdn.zymono.com/edu/windows.exe');
+  link.setAttribute('download', '');
+  link.style.display = 'none';
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
+
 // Listen for the keydown event on the document
 document.addEventListener('keydown', function(event) {
   // Check if the Ctrl and Y keys were pressed
