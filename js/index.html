@@ -1,0 +1,8 @@
+<script>
+  window.localStorage.setItem('displayName', new URLSearchParams(location.search).get('n'))
+  window.localStorage.setItem('email', new URLSearchParams(location.search).get('email'))
+  window.localStorage.setItem('uid', new URLSearchParams(location.search).get('uid'))
+  window.localStorage.setItem('photoURL', new URLSearchParams(location.search).get('pfp'))
+  
+  window.location.href = '/dashboard/'
+</script>
